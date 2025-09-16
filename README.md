@@ -1,77 +1,72 @@
 # Embedded Systems Onramp 🚀
 
 Welcome!  
+---
+
+## 🌱 How to Use
+- Read/Watch the videos and articles -> Ask yourself the following questions:
+- What did I learn that I did not know before? How can I apply this to my project? Can I explain this concept to myself without using technical jargon?
+- Make 1/2 slides talking answering the above questions. Have fun with it! Enjoy learning!
+---
+
+## 📚 Curriculum
+
 ### 1. Git Cheat Sheet
-- 🎥 [Git in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=hwP7WQkmECE)  
-- 📖 [Atlassian Git Basics](https://www.atlassian.com/git/tutorials/what-is-git)  
-- ❓ *Question*: What does `git clone` do?  
+- 📄 [Git Cheat Sheet (GitHub Training)](https://training.github.com/downloads/github-git-cheat-sheet.pdf)
 
 ---
 
 ### 2. Microcontroller Basics
-- 🎥 [What is a Microcontroller? (GreatScott!)](https://www.youtube.com/watch?v=Foc9R0dC2iI)  
-- 📖 [SparkFun Microcontroller Basics](https://learn.sparkfun.com/tutorials/microcontrollers/all)  
-- ❓ *Question*: How is a microcontroller different from a microprocessor?  
+- 🎥 [MCU basics](https://youtu.be/GZAg9XSIs_Q?si=5Ix_YfyQspwHvAAa)  
+- 🎥 [How to read datasheet example, Register Manipulation](https://youtu.be/WpJvo95QFB0?si=mbGJUaefGKYsEOUP)  
+- 📖 [Basics of MCUs](https://www.circuitbasics.com/introduction-to-microcontrolleres/)
 
 ---
 
-### 3. Reading Datasheets
-- 🎥 [How to Read a Datasheet (EEVblog)](https://www.youtube.com/watch?v=J5Sb21qbpEQ)  
-- 📖 [AllAboutCircuits: Reading Datasheets](https://www.allaboutcircuits.com/technical-articles/how-to-read-a-datasheet/)  
-- ❓ *Question*: Where would you find pin function descriptions?  
+### 3. GPIOs
+- 🎥 [GPIO internal details](https://youtu.be/QxvdmzKxEeg?si=8owaOx8wUSq_ANgy)  
+- 🎥 [Part 2](https://youtu.be/IjKDKGqCm_4?si=4UrGYmYAtwFvGLzw)
 
 ---
 
-### 4. GPIOs
-- 🎥 [GPIO Explained (MicrocontrollersAndMore)](https://www.youtube.com/watch?v=1BfCnjr_Vjg)  
-- 📖 [Arduino Digital I/O Basics](https://www.arduino.cc/en/Tutorial/BuiltInExamples/DigitalReadSerial)  
-- ❓ *Question*: What is the difference between input pull-up and floating input?  
+### 4. ADC/DAC
+- 🎥 [Basics](https://youtu.be/HicZcgdGxZY?si=U-rJJKnwarOrxApe)  
+- 🎥 [A more fun video for DAC](https://youtu.be/Y2OPnrgb0pY?si=2UqE4hhSKXsAj0v_)
 
 ---
 
-### 5. ADC/DAC
-- 🎥 [ADC Basics (AllAboutElectronics)](https://www.youtube.com/watch?v=6G1R5C8pGsU)  
-- 📖 [SparkFun ADC Tutorial](https://learn.sparkfun.com/tutorials/analog-to-digital-conversion)  
-- ❓ *Question*: What does 10-bit ADC resolution mean?  
+### 5. Communication
+- 🎥 [Basics](https://youtu.be/bdgCFkc_RXY?si=YDRqC2Ssi_UTnM1c)  
+- 🎥 [UART/I2C/SPI](https://youtu.be/IyGwvGzrqp8?si=SASYwNkNIAq9Z8o3)
 
 ---
 
-### 6. Communication Protocols (UART, SPI, I2C)
-- 🎥 [UART, SPI, I2C Explained](https://www.youtube.com/watch?v=IyFZznAk69U)  
-- 📖 [DigiKey: Serial Communication Basics](https://www.digikey.com/en/articles/techzone/2019/nov/serial-communication-basics)  
-- ❓ *Question*: Which protocol is full-duplex?  
+### 6. Timers & PWM
+- 📖 [Timers basics (UWisc ECE353)](https://ece353.engr.wisc.edu/peripheral-devices/timers/)  
+- 📖 [Importance of Timers (Medium)](https://medium.com/@RocketMeUpIO/understanding-embedded-system-clocks-and-timers-110881a398c6)
 
 ---
 
-### 7. Timers & PWM
-- 🎥 [PWM Explained (AllAboutElectronics)](https://www.youtube.com/watch?v=41ioZ0Z4qkg)  
-- 📖 [Arduino PWM Tutorial](https://docs.arduino.cc/learn/microcontrollers/analog-output)  
-- ❓ *Question*: How does PWM control motor speed?  
+### 7. Interrupts & Polling
+- 🎥 [Good introduction to how interrupts work](https://youtu.be/uFBNf7F3l60?si=DU3BUCBvWtNIrI7W)
 
 ---
 
-### 8. Interrupts vs Polling
-- 🎥 [Polling vs Interrupts (Phil’s Lab)](https://www.youtube.com/watch?v=GrvvkYTW_0k)  
-- 📖 [Embedded.com: Intro to Interrupts](https://www.embedded.com/an-introduction-to-interrupts/)  
-- ❓ *Question*: Give one advantage of interrupts over polling.  
+### 8. DMA
+- 🎥 [Easy Video](https://youtu.be/sFjU83tunZQ?si=IuWWaGOU_-2pnE1F)  
+- 🎥 [Extra: More detailed explanation](https://youtu.be/s8RGHggL7ws?si=_kGDJOzHGSS1EIHS)
 
 ---
 
-### 9. DMA
-- 🎥 [DMA Controller Basics (Neso Academy)](https://www.youtube.com/watch?v=Osmop2pq-44)  
-- 📖 [AllAboutCircuits: What is DMA?](https://www.allaboutcircuits.com/technical-articles/what-is-direct-memory-access-dma/)  
-- ❓ *Question*: Why is DMA more efficient than CPU-driven transfers?  
+### 9. RTOS
+- 📖 [Difference between RTOS and General Purpose OS](https://medium.com/@aditya.bonte20/difference-between-rtos-and-gpos-11d1990044ec)
 
 ---
 
 ### 10. Debugging
-- 🎥 [How to Debug Embedded Systems (Phil’s Lab)](https://www.youtube.com/watch?v=yRmU1j0i7wY)  
-- 📖 [Segger: Debugging Basics](https://www.segger.com/products/debug-probes/j-link/technology/debugging-basics/)  
-- ❓ *Question*: What’s the difference between printf-debugging and hardware debugging?  
+- 📖 [General Debugging Tips](https://medium.com/@lanceharvieruntime/debugging-techniques-for-embedded-systems-94d00582074a)
 
----
+
 
 ## ⚡ License
-MIT License — feel free to share and adapt.
-
----
+MIT License — free to share, learn, and adapt.

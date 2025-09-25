@@ -3,10 +3,10 @@ Before we can understand drivers, we first need to grasp the concept of abstract
 
 ## Example:
 You'll see this line in main.c:
-uart_write_bytes(RYLR998_UART_PORT, at_command, strlen(at_command));
-This function provides a high level of abstraction. It doesn't directly manipulate the hardware to send bits. Instead, it calls into the ESP-IDF's dedicated UART driver. If you trace the function, you'll find its source code in the esp-idf/components/driver/uart directory.
+**uart_write_bytes(RYLR998_UART_PORT, at_command, strlen(at_command));**
+This function provides a high level of abstraction. It doesn't directly manipulate the hardware to send bits. Instead, it calls into the ESP-IDF's dedicated UART driver. If you trace the function, you'll find its source code in the **esp-idf/components/driver/uart directory**.
 
-Inside uart.c, you'll see that uart_write_bytes() eventually calls lower-level functions like uart_tx_all(). While you aren't expected to understand all of that code, it's worth browsing through it. You'll quickly see the immense complexity involved in managing hardware directly, and you'll appreciate that we are abstracted away from it!
+Inside uart.c, you'll see that **uart_write_bytes()** eventually calls lower-level functions like **uart_tx_all()**. While you aren't expected to understand all of that code, it's worth browsing through it. You'll quickly see the immense complexity involved in managing hardware directly, and you'll appreciate that we are abstracted away from it!
 
 ##The Big Picture
 In our projects, we will primarily use top-level, abstract functions like uart_write_bytes(). This approach is much easier, faster, and safer than direct register manipulation (e.g., GPIO->MODER |= ...).

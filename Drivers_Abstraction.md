@@ -1,5 +1,5 @@
 # 🚗 Drivers & Abstraction
-Before we can understand drivers, we first need to grasp the concept of abstraction. In this project, we won’t be writing drivers from scratch. Instead, we'll be using the powerful drivers provided by ESP-IDF, which abstract away the low-level hardware complexity for us.
+Before we can understand drivers, we first need to grasp the concept of abstraction. In this project, we won’t be writing drivers from scratch (mostly?). Instead, we'll be using the powerful drivers provided by ESP-IDF, which abstract away the low-level hardware complexity for us.
 
 ## Example:
 You'll see this line in main.c:

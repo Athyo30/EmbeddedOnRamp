@@ -8,7 +8,7 @@ This function provides a high level of abstraction. It doesn't directly manipula
 
 Inside uart.c, you'll see that **uart_write_bytes()** eventually calls lower-level functions like **uart_tx_all()**. While you aren't expected to understand all of that code, it's worth browsing through it. You'll quickly see the immense complexity involved in managing hardware directly, and you'll appreciate that we are abstracted away from it!
 
-##The Big Picture
+## The Big Picture
 In our projects, we will primarily use top-level, abstract functions like uart_write_bytes(). This approach is much easier, faster, and safer than direct register manipulation (e.g., GPIO->MODER |= ...).
 
 This concept isn't unique to Espressif. Other microcontroller ecosystems have similar layers:

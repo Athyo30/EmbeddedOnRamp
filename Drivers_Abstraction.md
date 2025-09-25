@@ -1,22 +1,19 @@
-## Drivers & Abstraction
+🚗 Drivers & Abstraction
+Before we can understand drivers, we first need to grasp the concept of abstraction. In this project, we won’t be writing drivers from scratch. Instead, we'll be using the powerful drivers provided by ESP-IDF, which abstract away the low-level hardware complexity for us.
 
-Drivers are a massive topic in embedded systems, and writing them from scratch can be quite complex. For this project, we won’t be writing drivers ourselves—instead, we will be using the drivers provided by ESP-IDF, which abstract us away from the hardware.
+For example, you'll see this line in main.c:
 
-For example, in `main.c` you might see:
+C
 
 uart_write_bytes(RYLR998_UART_PORT, at_command, strlen(at_command));
+This function provides a high level of abstraction. It doesn't directly manipulate the hardware to send bits. Instead, it calls into the ESP-IDF's dedicated UART driver. If you trace the function, you'll find its source code in the esp-idf/components/driver/uart directory.
 
-This function does not directly manipulate the UART hardware to send bits. Instead, it calls into the ESP-IDF UART driver. If you trace it, you’ll find the implementation in:
+Inside uart.c, you'll see that uart_write_bytes() eventually calls lower-level functions like uart_tx_all(). While you aren't expected to understand all of that code, it's worth browsing through it. You'll quickly see the immense complexity involved in managing hardware directly, and you'll appreciate that we are abstracted away from it!
 
-esp-idf/components/driver/uart
+The Big Picture
+In our projects, we will primarily use top-level, abstract functions like uart_write_bytes(). This approach is much easier, faster, and safer than direct register manipulation (e.g., GPIO->MODER |= ...).
 
-
-Inside uart.c, uart_write_bytes() eventually calls lower-level functions such as uart_tx_all(). These contain all the complexity of handling FIFOs, interrupts, DMA, and error conditions. 
-While we are not expected to fully understand this code, it’s valuable to recognize the effort that goes into writing such drivers—and to appreciate the abstraction layers provided to us.
-
-In practice, we will make use of top-level abstractions like uart_write_bytes() to interact with hardware. This is much easier and safer than directly manipulating registers (e.g., GPIO->MODER |= …).
-
-Other microcontroller ecosystems provide similar abstractions:
+This concept isn't unique to Espressif. Other microcontroller ecosystems have similar layers:
 
 STM32: HAL (Hardware Abstraction Layer)
 
@@ -24,12 +21,13 @@ TI MSP430: DriverLib
 
 Nordic nRF52: nRF5 SDK drivers
 
-These abstractions save time, improve readability, and help ensure portability across projects.
+Using these libraries allows us to focus on our application's logic instead of the nitty-gritty hardware details.
 
-Resources
+📚 Resources
+Drivers are a massive topic, so finding introductory material can be challenging. These resources provide a good starting point, but be aware they are more in-depth.
 
-📖 Article: Writing a Device Driver — Simple Example with RTOS
+📖 Article: Writing a Device Driver — Simple Example with RTOS [https://medium.com/@lanceharvieruntime/writing-a-device-driver-using-freertos-a-detailed-guide-d8b70af7cdb7]
 
-🎥 How to Write a Driver (40 min)
+🎥 Video 1: How to Write a Driver (40 min) [https://www.youtube.com/watch?v=_JQAve05o_0&t=2s]
 
-🎥 UART Driver Deep Dive (55 min)
+🎥 Video 2: UART Driver Deep Dive (55 min) [https://www.youtube.com/watch?v=wC9a0IkPA1A]
